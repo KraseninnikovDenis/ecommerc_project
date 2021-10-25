@@ -1,9 +1,51 @@
 {% extends 'shop/base.html' %}
+
+{% load static %}
+
 {% block title %} 
     Home
 {% endblock %}
 
 {% block content %}
-    <h1>Home</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <img src ="{% static 'img/Shop_Logo_1_July120151.jpg' %}" >
+        </div>
+    </div>
+    
+    <div class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto text-center">
+                    <h1 class="text-capitalize font-weight-bold">
+                        Наши товары 
+                     </h1> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="conteiner">
+        <div class="row">
+            {% for i in '12345678' %}
+            <div class="col-9 mx-auto col-md-6 col-lg-3">
+                <div class="card mb-4">
+                    <div class="p-3">
+                        <img class = "card-img-top" src="{% static 'img/3399.00_1_tif_1000x1000.jpg' %}">
+                    </div>
+                    <div class ="card-footer d-flex justify-content-between">
+                        <p class="font-weight-bold mb-0">
+                            коробка
+                        </p>
+                        <h5 class="text-info font-italic mb-0">
+                            100 руб.
+                        </h5>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
 

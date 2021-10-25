@@ -1,0 +1,25 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} 
+    товар
+{% endblock %}
+
+{% block content %}
+    <div class="container py-5">
+        <div class="row mt-5">
+            <div class="col-10 mx-auto col-md-6 my-3">
+                <img class="marginaut" src="{% static 'img/3399.00_1_tif_1000x1000.jpg' %}" height="500">
+            </div>
+        </div>
+    </div>
+    <div class="col-10 mx-auto col-md-6 my-3">
+        <div>
+            <h1 class="product_title">коробка</h1>
+            <h5 class="text-info font-italic mb-4">100 руб.</h5>
+            <p class="product_desc">описание продукта</p>
+            <p class="text-justify product_text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+            <p class="text-justify product_text">отсутствует в наличии</p>
+        </div>
+    </div>
+
+{% endblock %}
