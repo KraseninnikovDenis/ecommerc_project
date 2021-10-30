@@ -1,10 +1,14 @@
 from django.db import models
+from django.urls import reverse
 
 class Category (models.Model):
     name = models.CharField(max_length=250, unique=True, verbose_name='название категории')
     slug = models.SlugField(max_length=250, unique=True, verbose_name='слаг')
     discription= models.TextField(blank=True, verbose_name='описание категории')
     image= models.ImageField(upload_to='category', blank=True, verbose_name='картинка')
+
+    def get_url(self):
+        return reverse ('products_by_category',args=[self.slug])
 
     class Meta:
         #ordering=('name')

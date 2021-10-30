@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a href="#" class="nav-brend"><ion-icon name="pricetags" size="large"></ion-icon></a>
+    <a href="{% url 'home' %}" class="nav-brend"><ion-icon name="pricetags" size="large"></ion-icon></a>
     <button class="navbar-toggler bg-light" data-toggle="collapse" data-target="#navbar">
       <span class="navmar-toggler-icon"></span>
     </button>
@@ -8,11 +8,10 @@
         <li class="nav-item dropdown">
           <a class="nav-link px-3 text-light text-uppercase font-weight-bold dropdown-toggle" data-toggle="dropdown" href="">категории</a>
           <div class="dropdown-content"> 
-            <a class="dropdown-item text-dark" href="">категория 1</a>
-            <a class="dropdown-item text-dark" href="">категория 2</a>
-            <a class="dropdown-item text-dark" href="">категория 3</a>
-            <a class="dropdown-item text-dark" href="">категория 4</a>
-            <a class="dropdown-item text-dark" href="">категория 5</a>
+            <a class="dropdown-item text-dark" href="{% url 'home' %}">все товары</a>
+            {% for category in links %}
+            <a class="dropdown-item text-dark" href="{{ category.get_url }}">{{ category.name }}</a>
+            {% endfor %}
           </div>  
         </li>
         <li class="nav-item"><a class="nav-link px-3 text-light text-uppercase font-weight-bold" href="">контакты</a></li>
